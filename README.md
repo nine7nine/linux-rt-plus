@@ -17,6 +17,9 @@ This is Archlinux' standard Linux-rt package in AUR, plus additional patchwork a
 * 0003-block-bfq-add-Early-Queue-Merge-EQM-to-BFQ-v7r11-for.patch
 * 0004-block-bfq-turn-BFQ-v7r11-for-4.6.0-into-BFQ-v8r3-for.patch
 
+# UKSM (Ultra Kernel Samepage Merging)
+* uksm-0.1.2.5-for-v4.6.patch
+
 # Additional cpu optimizations for gcc
 * enable_additional_cpu_optimizations_for_gcc_v4.9+_kernel_v3.15+.patch.gz
 
