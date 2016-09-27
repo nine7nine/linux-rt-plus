@@ -12,7 +12,7 @@ _srcname=linux-4.6
 _pkgver=4.6.7
 _rtpatchver=rt13
 pkgver=${_pkgver}_${_rtpatchver}
-pkgrel=2
+pkgrel=3
 arch=('i686' 'x86_64')
 url="http://www.kernel.org/"
 license=('GPL2')
@@ -40,6 +40,7 @@ source=("https://www.kernel.org/pub/linux/kernel/v4.x/${_srcname}.tar.xz"
         # standard config files for mkinitcpio ramdisk
         "${pkgbase}.preset"
         'change-default-console-loglevel.patch'
+        'uksm-0.1.2.5-for-v4.6.patch'
         '0109-intel_idle-tweak-cpuidle-cstates.patch'
         '0111-init_task-faster-timerslack.patch'
         '0113-fs-ext4-fsync-optimize-double-fsync-a-bunch.patch'
@@ -65,9 +66,10 @@ sha256sums=('a93771cd5a8ad27798f22e9240538dfea48d3a2bf2a6a6ab415de3f02d25d866'
             '9c183ff15d68e4539b44bc91799ff218fa006e10597bfa2e367288916a39f889'
             'cf0f984ebfbb8ca8ffee1a12fd791437064b9ebe0712d6f813fd5681d4840791'
             '1b6af3386f3e2c31e847200d343a43679e2d39d4c69ed4c4eb931440587b6d52'
-            'ebee459c8582b185343d8faa4226d041c5fab23d33d68bbce34041acde44bdd5'
+            '6ff89fb58a1ac33f22ebbbd9c2f8ac3bd179a6feda8a5eef4dbbd0e046379fda'
             'f1db5757fef2581146cad8fa56bae8b4177292233036e6aec3c465a5c2b70928'
             '1256b241cd477b265a3c2d64bdc19ffe3c9bbcee82ea3994c590c2c76e767d99'
+            '504e2f85c73b20b56e41247f728812031cde0a905f6bd48439267e3b8beccd68'
             'db12e032e81dea402789b3cfb837ac87ff31400e79066c287b3ed07f9afd3e21'
             '11a7f903e7bc458edbd06bd77b0557f33768b6e863103d41fe4c104cb2b5388b'
             '7f516758aed83363b37bc1cc6d9b5361aac6cdb38eb5b9e2cd8b8fdea98a59b4'
@@ -146,6 +148,9 @@ prepare() {
   patch -p1 -i "${srcdir}/0120-reduce-e1000e-boot-time-by-tightening-sleep-ranges.patch"
   msg "10"
   patch -p1 -i "${srcdir}/0124-give-rdrand-some-credit.patch"
+
+  msg "apply uksm-0.1.2.5-for-v4.6.patch"
+  patch -p1 -i "${srcdir}/uksm-0.1.2.5-for-v4.6.patch"
   
   msg "All patches have successfully been applied"
 
