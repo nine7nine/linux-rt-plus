@@ -44,6 +44,8 @@ More Info; https://clearlinux.org/
 
 source package/srpm; https://download.clearlinux.org/current/source/SRPMS/linux-4.7.4-262.src.rpm
 
-The 'overload-on-lwakeup.patch' addresses the 'wastedcores' paper/research found here; https://github.com/jplozi/wastedcores 
+The 'overload-on-lwakeup.patch' addresses the 'wastedcores' problem / research paper on linux 4.0+    
 
-the rest of these patches are 'testers', thus far.
+More Info, source: https://github.com/jplozi/wastedcores 
+
+the rest of these Clear Linux patches are 'testers', thus far.
