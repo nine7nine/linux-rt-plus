@@ -6,10 +6,13 @@ This is Archlinux' standard Linux-rt package in AUR, plus additional patchwork a
 
 fix-race-in-PRT-wait-for-completion-simple-wait-code_Nvidia-RT-160319.patch
 
+# dcache fixup for performance regression
+
+* 0001-fix-dcache-try-1.patch
+
 # BFQ io Scheduler
 
 * 0001-block-cgroups-kconfig-build-bits-for-BFQ-v7r11-4.6.0.patch
-* 0001-fix-dcache-try-1.patch
 * 0001-linux-4.6-rtlwifi-fix-atomic.patch
 * 0002-block-introduce-the-BFQ-v7r11-I-O-sched-for-4.6.0.patch
 * 0003-block-bfq-add-Early-Queue-Merge-EQM-to-BFQ-v7r11-for.patch
