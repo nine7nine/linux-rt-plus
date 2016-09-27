@@ -44,4 +44,6 @@ More Info; https://clearlinux.org/
 
 source package/srpm; https://download.clearlinux.org/current/source/SRPMS/linux-4.7.4-262.src.rpm
 
-The 'overload-on-lwakeup.patch' addresses the 'wastedcores' paper/research found here; source https://github.com/jplozi/wastedcores ... Most of the rest of these (Clear linux) patches are just 'testers', but I haven't noticed any perfromance regressions or bugs when making use of them, thus far.
+The 'overload-on-lwakeup.patch' addresses the 'wastedcores' paper/research found here; https://github.com/jplozi/wastedcores 
+
+the rest of these patches are 'testers', thus far.
