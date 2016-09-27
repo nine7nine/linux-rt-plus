@@ -2,15 +2,6 @@
 
 This is Archlinux' standard Linux-rt package in AUR, plus additional patchwork and features;
 
-# Nvidia fix on -rt kernels: 
-* fix-race-in-PRT-wait-for-completion-simple-wait-code_Nvidia-RT-160319.patch
-
-# dcache fixup for performance regression
-* 0001-fix-dcache-try-1.patch
-
-# rtlwifi fix atomic
-* 0001-linux-4.6-rtlwifi-fix-atomic.patch
-
 # BFQ io Scheduler
 * 0001-block-cgroups-kconfig-build-bits-for-BFQ-v7r11-4.6.0.patch
 * 0002-block-introduce-the-BFQ-v7r11-I-O-sched-for-4.6.0.patch
