@@ -17,14 +17,14 @@ More info; http://algo.ing.unimo.it/people/paolo/disk_sched/
 
 Uksm, very handy for VMs or processes where memory can be saved by de-duplicating it. 
 
-More info; http://kerneldedup.org/en/projects/uksm/introduction/
+* More info; http://kerneldedup.org/en/projects/uksm/introduction/
 
 # Additional cpu optimizations for gcc
 * enable_additional_cpu_optimizations_for_gcc_v4.9+_kernel_v3.15+.patch.gz
 
 Graysky's wonderful kernel_gcc_patch.
 
-More info; https://github.com/graysky2/kernel_gcc_patch
+* More info; https://github.com/graysky2/kernel_gcc_patch
 
 # Selected Clear Linux Patchwork;
 * 0109-intel_idle-tweak-cpuidle-cstates.patch
@@ -40,12 +40,11 @@ More info; https://github.com/graysky2/kernel_gcc_patch
 
 Clear Linux, built by Intel; a distribution built for the cloud.
 
-More Info; https://clearlinux.org/
-
-source package/srpm; https://download.clearlinux.org/current/source/SRPMS/linux-4.7.4-262.src.rpm
+* More Info; https://clearlinux.org/
+* source package/srpm; https://download.clearlinux.org/current/source/SRPMS/linux-4.7.4-262.src.rpm
 
 The 'overload-on-lwakeup.patch' addresses the 'wastedcores' problem / research paper on linux 4.0+    
 
-More Info, source: https://github.com/jplozi/wastedcores 
+* More Info, source: https://github.com/jplozi/wastedcores 
 
-the rest of these Clear Linux patches are 'testers', thus far.
+...The rest of these Clear Linux patches are 'testers', thus far.
