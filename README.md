@@ -1,4 +1,4 @@
-# linux-rt-plus
+# LINUX_RT_PLUS
 
 This is Archlinux' standard Linux-rt package in AUR, plus additional patchwork and features;
 
