@@ -10,9 +10,9 @@
 pkgbase=linux-rt_plus             # Build kernel with a different name
 _srcname=linux-4.6
 _pkgver=4.6.7
-_rtpatchver=rt13
+_rtpatchver=rt14
 pkgver=${_pkgver}_${_rtpatchver}
-pkgrel=3
+pkgrel=1
 arch=('i686' 'x86_64')
 url="http://www.kernel.org/"
 license=('GPL2')
@@ -58,7 +58,7 @@ sha256sums=('a93771cd5a8ad27798f22e9240538dfea48d3a2bf2a6a6ab415de3f02d25d866'
             'SKIP'
             'e06e9f84571856b02eb5c1d399e120a7ae8d618e4b444009dd53c9ca8f89fa11'
             'SKIP'
-            '18240a6d6f2c853a5cffe3a2051c7b7f9d6ac5ae2d8001a19db139c063da0464'
+            '535c8fec8b03be3e6397ea3d78850be92763cbc2a3faa5a5ca76b48418875a9e'
             'SKIP'
             '1857e05fd79baffc04dd075be81257d0a43351c244b7f360b48408a28ecfde2d'
             '595887ea141ee7373460d325368f362ca87695259b9bca3499f12ef76322172b'
@@ -151,7 +151,7 @@ prepare() {
 
   msg "apply uksm-0.1.2.5-for-v4.6.patch"
   patch -p1 -i "${srcdir}/uksm-0.1.2.5-for-v4.6.patch"
-  
+
   msg "All patches have successfully been applied"
 
   if [ "${CARCH}" = "x86_64" ]; then
@@ -189,7 +189,7 @@ prepare() {
 build() {
   cd "${srcdir}/${_srcname}"
 
-  make ${MAKEFLAGS} LOCALVERSION= bzImage modules
+  make -j5 ${MAKEFLAGS} LOCALVERSION= bzImage modules
 }
 
 _package() {
